@@ -86,19 +86,58 @@ public class Quiz implements ActionListener {
 
     public Quiz() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800,650);
-        frame.getContentPane().setBackground(new Color(222,227,216));
+        frame.setSize(650,650);
+        frame.getContentPane().setBackground(new Color(50,50,50));
         frame.setLayout(null);
         frame.setResizable(false);
 
         textField.setBounds(0,0,650,50);
-        textField.setBackground(new Color(50,50,50));
+        textField.setBackground(new Color(25,25,25));
         textField.setForeground(new Color(25,255,0));
-        textField.setFont(new Font("Ink Free", Font.BOLD,30));
+        textField.setFont(new Font("Ink Free", Font.BOLD,25));
         textField.setBorder(BorderFactory.createBevelBorder(1));
         textField.setHorizontalAlignment(JTextField.CENTER);
         textField.setEditable(false);
 
+        textArea.setBounds(0,50,650,50);
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        textArea.setBackground(new Color(25,25,25));
+        textArea.setForeground(new Color(25,255,0));
+        textArea.setFont(new Font("MV Boli", Font.BOLD,25));
+        textArea.setBorder(BorderFactory.createBevelBorder(1));
+        textArea.setEditable(false);
+        textArea.setText("hi im William hdjhg");
+
+        buttonA.setBounds(0,100,100,100);
+        buttonA.setFont(new Font("MV Boli", Font.BOLD,35));
+        buttonA.setFocusable(false);
+        buttonA.addActionListener(this);
+        buttonA.setText("oh");
+
+        buttonB.setBounds(0,200,100,100);
+        buttonB.setFont(new Font("MV Boli", Font.BOLD,35));
+        buttonB.setFocusable(false);
+        buttonB.addActionListener(this);
+        buttonB.setText("B");
+
+        buttonC.setBounds(0,300,100,100);
+        buttonC.setFont(new Font("MV Boli", Font.BOLD,35));
+        buttonC.setFocusable(false);
+        buttonC.addActionListener(this);
+        buttonC.setText("C");
+
+        buttonD.setBounds(0,400,100,100);
+        buttonD.setFont(new Font("MV Boli", Font.BOLD,35));
+        buttonD.setFocusable(false);
+        buttonD.addActionListener(this);
+        buttonD.setText("D");
+
+        frame.add(buttonA);
+        frame.add(buttonB);
+        frame.add(buttonC);
+        frame.add(buttonD);
+        frame.add(textArea);
         frame.add(textField);
         frame.setVisible(true);
     }
